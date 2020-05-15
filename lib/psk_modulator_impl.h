@@ -680,7 +680,7 @@
 #define INCLUDED_CS330_PSK_MODULATOR_IMPL_H
 
 #include <cs330/psk_modulator.h>
-
+#include <pmt/pmt.h>
 namespace gr
 {
 namespace cs330
@@ -705,6 +705,10 @@ private:
   uint8_t               *d_msg_with_sync_buffer;
   int                   d_msg_len;
   int                   d_remaining;
+  int					m_mod_order;
+  int					m_markDist;
+  int 					m_idx_sync;
+
 };
 
 } // namespace cs330
